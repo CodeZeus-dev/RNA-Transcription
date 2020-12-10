@@ -12,8 +12,10 @@ public static class RnaTranscription
         complementaryBases.Add("A", "U");
         complementaryBases.Add("T", "A");
 
+        // if only 1 nucleotide, return its complement
         if (nucleotide.Length == 1) { return complementaryBases[nucleotide]; }
 
+        // If multiple nucleotides or sequence, return its complementary sequence
         string[] complementRNA = new string[nucleotide.Length];
 
         for (int i = 0; i < nucleotide.Length; i++)
